@@ -4,12 +4,13 @@ import AddMenuItemsForm from "../Components/AddMenuItemsForm.jsx";
 import axios from "axios";
 
 const Food = ({ menu }) => {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const [foodList, setFoodList] = useState([]);
   const [openForm, setOpenForm] = useState(false);
 
   const handleAddFood = (newFood) => {
     axios
-      .post("http://localhost:5000/addMenuItem", newFood, menu)
+      .post(`${API_BASE_URL}/addMenuItem`, newFood, menu)
       .then((res) => {
         console.log(res);
         getFoodList();
@@ -21,7 +22,7 @@ const Food = ({ menu }) => {
 
   const getFoodList = () => {
     axios
-      .get(`http://localhost:5000/menu/${menu}`)
+      .get(`${API_BASE_URL}/menu/${menu}`)
       .then((res) => {
         setFoodList(res.data);
       })
