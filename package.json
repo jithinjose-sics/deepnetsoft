@@ -1,0 +1,26 @@
+{
+  "name": "deepnetsoft",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "cd menumanagementbackend && npm install",
+    "start-server": "cd menumanagementbackend && npm start",
+    "install-client": "cd menumanagement && npm install",
+    "build-client": "cd menumanagement && npm run build",
+    "start-client": "cd menumanagement && npm run dev",
+    "install-all": "npm run install-server && npm run install-client",
+    "build": "npm run build-client",
+    "start": "npm run start-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-jithinjose-sics:jithinjose-sics/deepnetsoft.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
