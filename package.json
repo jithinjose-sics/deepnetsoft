@@ -7,17 +7,11 @@
     "install-server": "cd menumanagementbackend && npm install",
     "install-client": "cd menumanagement && npm install --force",
     "build-client": "cd menumanagement && npm run build",
-    "start": "cd menumanagementbackend && npm start"
+    "start": "cd menumanagementbackend && npm start",
+    "render-build": "npm run install-all && npm run build-client"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com-jithinjose-sics:jithinjose-sics/deepnetsoft.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "engines": {
-    "node": ">=16.0.0"
+    "node": "18.x",
+    "npm": "9.x"
   }
 }
