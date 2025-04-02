@@ -2,16 +2,15 @@
     "version": 2,
     "builds": [
       {
-        "src": "menumanagementbackend/index.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "menumanagement/vite.config.js",
+        "src": "menumanagement/package.json",
         "use": "@vercel/static-build",
         "config": {
-          "distDir": "menumanagement/dist",
-          "outputDirectory": "menumanagement/dist"
+          "distDir": "dist"
         }
+      },
+      {
+        "src": "menumanagementbackend/index.js",
+        "use": "@vercel/node"
       }
     ],
     "routes": [
