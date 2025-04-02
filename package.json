@@ -1,11 +1,10 @@
 {
   "name": "deepnetsoft",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "install-all": "npm run install-server && npm run install-client",
     "install-server": "cd menumanagementbackend && npm install",
-    "install-client": "cd menumanagement && npm install --force",
+    "install-client": "cd menumanagement && npm install --production=false && npm install vite@latest",
     "build-client": "cd menumanagement && npm run build",
     "start": "cd menumanagementbackend && npm start",
     "render-build": "npm run install-all && npm run build-client"

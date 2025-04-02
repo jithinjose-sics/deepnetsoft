@@ -1,0 +1,31 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "menumanagementbackend/index.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "menumanagement/vite.config.js",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "menumanagement/dist",
+          "outputDirectory": "menumanagement/dist"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "menumanagementbackend/index.js"
+      },
+      {
+        "src": "/assets/(.*)",
+        "dest": "menumanagement/dist/assets/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "menumanagement/dist/index.html"
+      }
+    ]
+  }
