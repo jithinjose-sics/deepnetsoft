@@ -6,18 +6,6 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
-    define: {
-      'process.env': env
-    },
-    server: {
-      proxy: {
-        '/api': {
-          target: env.VITE_API_BASE_URL || 'http://localhost:5000',
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, '')
-        }
-      }
-    },
     build: {
       outDir: 'dist',
       emptyOutDir: true,
@@ -29,6 +17,6 @@ export default defineConfig(({ mode }) => {
         }
       }
     },
-    base: './' // Relative paths for production
+    base: './'
   };
 });
